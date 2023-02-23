@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+  body { 
+	font-family: segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
+	display: grid;
+	grid-template-areas: 
+    "header header header"
+    "nav section aside"
+    "footer footer footer";
+	grid-template-rows: 80px 2fr 50px;
+	grid-template-columns: 15% 1fr 18%;
+	grid-gap: 5px;
+  height: 100vh;
+  margin: 10px;  
+} 
+header{
+    display: flex;
+            justify-content: center;
+            align-items: center;
+    grid-auto-flow: row;
+
+
+    background-color: bisque;
+    grid-area:  header;
+}  
+nav{
+    display: flex;
+            justify-content: center;
+            align-items: center;
+    background-color: burlywood;
+grid-area: nav;
+}
+section{
+    display: flex;
+            justify-content: center;
+            align-items: center;
+    background-color: darkcyan;
+grid-area: section;
+}
+aside{
+    display: flex;
+            justify-content: center;
+            align-items: center;
+    background-color: forestgreen;
+grid-area: aside;
+}
+footer{
+    display: flex;
+            justify-content: center;
+            align-items: center;
+    background-color: gold;
+grid-area: footer;
+}
+
+
+
+</style>
+    
+</head>
+
+<body>
+    <header>header</header>
+    <nav>nav</nav>
+    <section>section</section>
+<aside>aside</aside>
+<footer>footer</footer>
+
+
+</body>
+
+</html>
