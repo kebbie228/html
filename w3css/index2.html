@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="w3.css">
+
+</head>
+
+<body>
+    <div class="w3-bar w3-cyan">
+        <a href="#" onclick="city(1);" class="w3-bar-item w3-button w3-mobile w3-hover-green">London</a>
+        <a href="#" onclick="city(2);" class="w3-bar-item w3-button w3-mobile w3-hover-green">Paris</a>
+        <a href="#" onclick="city(3);" class="w3-bar-item w3-button w3-mobile w3-hover-green">Tokyo</a>
+      </div>
+      <img src="images/london.png" id="city1" class="w3-hide">
+      <img src="images/paris.png" id="city2" class="w3-hide">
+      <img src="images/tokyo.png" id="city3" class="w3-hide">
+      <div class="w3-sidebar w3-light-grey w3-card" style="width:200px">
+        <div class="w3-sidebar w3-light-grey w3-card" style="width:200px">
+            <a href="#" class="w3-bar-item w3-button">Link 1</a>
+            <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">Accordion</button>
+            <div id="demoAcc" class="w3-bar-block w3-hide w3-white w3-card-4">
+              <a href="#" class="w3-bar-item w3-button">Link</a>
+              <a href="#" class="w3-bar-item w3-button">Link</a>
+            </div>
+            <div class="w3-dropdown-click">
+              <button class="w3-button" onclick="myDropFunc()">Dropdown</button>
+              <div id="demoDrop" class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
+                <a href="#" class="w3-bar-item w3-button">Link</a>
+                <a href="#" class="w3-bar-item w3-button">Link</a>
+              </div>
+            </div>
+            <a href="#" class="w3-bar-item w3-button">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+          </div> 
+          alex говорит:<div class="w3-sidebar w3-light-grey w3-card-4 w3-animate-left" style="width:200px" id="mySidebar">
+                  <div class="w3-bar w3-dark-grey">
+                  <span class="w3-bar-item w3-padding-16">Content</span>
+                  <button onclick="w3_close()"
+                  class="w3-bar-item w3-button w3-right w3-padding-16" title="close Sidebar">&times;</button>
+                  </div>
+                  <div class="w3-bar-block">
+                  <a class="w3-bar-item w3-button w3-green" href="javascript:void(0)">Home</a>
+                  <a class="w3-bar-item w3-button" href="javascript:void(0)">About</a>
+                  <a class="w3-bar-item w3-button" href="javascript:void(0)">Contact</a>
+                  <div class="w3-dropdown-hover">
+                    <a class="w3-button" href="javascript:void(0)">Dropdown <i class="fa fa-caret-down"></i></a>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                      <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 1</a>
+                      <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 2</a>
+                      <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 3</a>
+                    </div>
+                  </div>
+                  <a class="w3-bar-item w3-button" href="javascript:void(0)">Support</a>
+                  </div>
+                </div>
+                
+                <div id="main" style="margin-left:200px">
+                
+                <div class="w3-container w3-display-container">
+                  <span title="open Sidebar" style="display:none" id="openNav" class="w3-button w3-transparent w3-display-topleft w3-xlarge" onclick="w3_open()">&#9776;</span>
+                  <h3 class="h3" style="position:fixed;top:36px; left:50px">My Page</h3>
+                </div>
+                
+                </div>
+                
+                <script>
+                  function city(index) {
+                      for (let i=1; i<=3; i++){
+                          var elem = document.getElementById("city"+i);
+                          elem.className = elem.className.replace("w3-show", "w3-hide");
+                      }
+                      var elem = document.getElementById("city"+index);                    
+                    elem.className = elem.className.replace("w3-hide", "w3-show");
+                    
+          //elem.className+=
+           " w3-show";          
+                  }
+          
+                  function w3_open() {
+            document.getElementById("main").style.marginLeft = "180px";
+            document.getElementById("mySidebar").style.width = "180px";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+          }
+          function w3_close() {
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+          }
+                  </script> 
+</body> 
+</html>
