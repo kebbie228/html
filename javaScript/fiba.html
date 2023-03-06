@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="w3.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container" class="w3-container w3-card w3-margin w3-padding-16">
+        <h3>fibonacchi</h3>
+    </div>
+    <script>
+        const fibonacci = n => {
+            if (n <= 1) {
+                return n;
+            }
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        };
+
+        var table = $('<table>');
+        var tbody = $('<tbody>');
+        table.append(tbody);
+        for (let i = 0; i < 4; i++) {
+            var tr = $('<tr>');
+            tbody.append(tr);
+            for (let j = 0; j < 10; j++) {
+                var td = $('<td>').html(fibonacci(i*10+j));                    
+                if (i % 2 == 0) td.addClass('w3-light-grey');
+                else td.addClass('w3-sand');
+                tr.append(td);
+            }
+        }
+        table.addClass('w3-table w3-bordered w3-small');
+        $('#container').append(table);        
+    </script> 
+    
+ </body>
+</html>

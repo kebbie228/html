@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="w3.css">
+    <style>
+        .button{
+        margin: 16px;
+    width: 150px;
+    background-color: aqua;
+border: 1px solid green;
+border-radius:8px ;
+
+
+        }
+    </style>
+</head>
+<body>
+    <button type="button" class="button w3-hover-shadow" onclick=" helloConsole()">Console</button>
+    <button type="button" class="button w3-hover-shadow" onclick=" helloAlert()">Alert</button>
+    <button type="button" class="button w3-hover-shadow" onclick=" helloDiv()">Div</button>
+<div id="container"></div>
+<script>
+
+    function helloConsole(){
+console.log("hello");
+} 
+  function helloAlert(){
+alert("hello");
+}
+function helloDiv(){
+div=document.getElementById('container');
+div.innerHTML+='hello<br/>';
+}
+</script>
+</body>
+</html>
